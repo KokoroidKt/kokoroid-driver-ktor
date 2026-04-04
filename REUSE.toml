@@ -1,0 +1,28 @@
+version = 1
+
+# 为所有辅助文件、构建脚本、IDE 配置等统一声明
+[[annotations]]
+path = [
+    ".gitattributes",
+    ".gitignore",
+    ".python-version",
+    "README.md",
+    "gradle.properties",
+    "gradlew",
+    "gradlew.bat",
+    "pyproject.toml",
+    "uv.lock",
+    "scripts/*.py",
+    "**/*.kts",
+    "**/*.gradle.kts",
+    "**/gradle/wrapper/gradle-wrapper.jar",
+    "**/gradle/wrapper/gradle-wrapper.properties",
+    "**/gradle/libs.versions.toml",
+    ".idea/**/*",
+    "**/src/main/resources/**/*.xml",
+    "**/src/main/resources/**/*.properties",
+    "**/src/main/resources/**/*.json",
+    "**/test-extension/src/main/resources/**/*.json"
+]
+SPDX-FileCopyrightText = "Kokoroid Contributors"
+SPDX-License-Identifier = "LGPL-2.1-or-later"

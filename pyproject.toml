@@ -1,0 +1,14 @@
+[project]
+name = "kokoroid"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.3.1",
+]
+
+[dependency-groups]
+tools = [
+    "reuse>=6.2.0",
+]
