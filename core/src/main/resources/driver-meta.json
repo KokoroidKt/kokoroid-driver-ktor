@@ -1,0 +1,11 @@
+{
+  "name": "KtorHttpDriver",
+  "version": "1.0.0",
+  "mainClass": "dev.kokoroidkt.ktorDriver.KtorDriver",
+  "authors": [
+    "foo"
+  ],
+  "description": "meow",
+  "website": "https://example.com",
+  "priority": 0
+}

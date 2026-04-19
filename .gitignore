@@ -41,3 +41,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### AI Settings ###
+# AI设置最好自己用，不要上传
+AGENTS.md

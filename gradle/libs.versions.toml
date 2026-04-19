@@ -13,22 +13,40 @@ junit = "4.13.1"
 junitJupiter = "5.14.0"
 mockk = "1.13.9"
 ktlint = "14.2.0"
-kokoroid = "0.3.2"
+kokoroid = "0.4.5"
+koin-bom = "4.1.1"
+ktor = "3.4.2"
 
 [libraries]
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-test = { module = "io.insert-koin:koin-test" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 kotlinGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlinxDatetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDatetime" }
 kotlinxSerialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJSON" }
 kotlinxCoroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinxCoroutinesTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 kotlinReflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlinReflect" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 kotlinx-serialization-hocon = { module = "org.jetbrains.kotlinx:kotlinx-serialization-hocon", version.ref = "kotlinx-serialization" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiter" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
-kokoroid-adapter-api = { group="dev.kokoroidkt", name="kokoroidkt-driver-api", version.ref="kokoroid"}
-kokoroid-transport-api = { group="dev.kokoroidkt", name="kokoroidkt-transport-api", version.ref="kokoroid"}
-kokoroid-core-api = { group="dev.kokoroidkt", name="kokoroidkt-core-api", version.ref="kokoroid"}
+kokoroid-adapter-api = { group = "dev.kokoroidkt", name = "kokoroidkt-driver-api", version.ref = "kokoroid" }
+kokoroid-transport-api = { group = "dev.kokoroidkt", name = "kokoroidkt-transport-api", version.ref = "kokoroid" }
+kokoroid-core-api = { group = "dev.kokoroidkt", name = "kokoroidkt-core-api", version.ref = "kokoroid" }
+
+# Ktor
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-websockets = { group = "io.ktor", name = "ktor-client-websockets", version.ref = "ktor" }
+ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
+
+ktor-server-core = { group = "io.ktor", name = "ktor-server-core", version.ref = "ktor" }
+ktor-server-netty = { group = "io.ktor", name = "ktor-server-netty", version.ref = "ktor" }
+ktor-server-websockets = { group = "io.ktor", name = "ktor-server-websockets", version.ref = "ktor" }
 
 # Libraries can be bundled together for easier import
 [bundles]
@@ -36,6 +54,9 @@ kotlinxEcosystem = ["kotlinxDatetime", "kotlinxSerialization", "kotlinxCoroutine
 kotlinxSerialization = ["kotlinx-serialization-json", "kotlinx-serialization-hocon"]
 testSuit = ["mockk", "junit", "junit-jupiter"]
 kokoroidSuit = ["kokoroid-adapter-api", "kokoroid-transport-api", "kokoroid-core-api"]
+koin = ["koin-bom", "koin-core"]
+ktorClient = ["ktor-client-cio", "ktor-client-core", "ktor-client-content-negotiation", "ktor-serialization-kotlinx-json", "ktor-client-websockets"]
+ktorServer = ["ktor-server-netty", "ktor-server-core", "ktor-server-websockets"]
 
 [plugins]
 kotlinPluginSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
