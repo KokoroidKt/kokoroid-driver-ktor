@@ -65,13 +65,6 @@ tasks.dokkaHtml {
     }
 }
 
-allprojects {
-    group = "dev.kokoroidkt"
-    version = findProperty("version")?.toString()
-        ?: System.getenv("VERSION")
-        ?: "undefined"
-}
-
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -91,6 +84,6 @@ nmcpAggregation {
         publishingType = "USER_MANAGED"
 
         // optional: configure the name of your publication in the portal UI
-        publicationName = "kokoroid:$version"
+        publicationName = "kokoroid-http-api:$version"
     }
 }

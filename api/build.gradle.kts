@@ -25,7 +25,7 @@ kotlin {
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
-    archiveFileName.set("kokoroidkt-http-driver-api-http-driver-sources.jar")
+    archiveFileName.set("kokoroidkt-http-driver-api-$version-sources.jar")
     from(sourceSets.main.get().allSource)
 }
 
