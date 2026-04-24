@@ -59,7 +59,7 @@ publishing {
             pom {
                 name.set("Kokoroid Http Driver API")
                 description.set("Http Driver API module of Kokoroid framework")
-                artifactId = "kokoroidkt-adapter-api"
+                artifactId = "kokoroidkt-http-driver-api"
                 url.set("https://github.com/KokoroidKt/kokoroid-driver-ktor")
                 licenses {
                     license {
