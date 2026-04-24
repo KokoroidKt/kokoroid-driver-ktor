@@ -1,0 +1,11 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:api
+dev.kokoroidkt.httpDriver.client
+dev.kokoroidkt.httpDriver.connection
+dev.kokoroidkt.httpDriver.constants
+dev.kokoroidkt.httpDriver.factory
+dev.kokoroidkt.httpDriver.http
+dev.kokoroidkt.httpDriver.rule
+dev.kokoroidkt.httpDriver.websocket
