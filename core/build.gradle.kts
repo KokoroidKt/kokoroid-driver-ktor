@@ -4,7 +4,7 @@ import dev.kokoroidkt.gradle.runKokoroid.config.runKokoroid
 
 plugins {
     kotlin("jvm")
-    id("dev.kokoroidkt.gradle.runKokoroid") version "0.4.0"
+    id("dev.kokoroidkt.gradle.runKokoroid") version "0.4.1"
     id("com.gradleup.shadow") version "9.4.1"
     alias(libs.plugins.kotlinPluginSerialization)
 }
