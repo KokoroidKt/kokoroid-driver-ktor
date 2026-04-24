@@ -43,7 +43,7 @@ jobs:
           rm -rf docs/api/null
 
       - name: Prepare CNAME
-        run: echo "httpapi.kdoc.kokoroidkt.dev" > docs/api/CNAME
+        run: echo "http-kdoc.kokoroidkt.dev" > docs/api/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
