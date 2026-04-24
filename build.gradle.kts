@@ -8,8 +8,12 @@ plugins {
     id("org.jetbrains.dokka") version "2.2.0"
 }
 
-group = "dev.kokoroid"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "dev.kokoroidkt"
+    version = findProperty("version")?.toString()
+        ?: System.getenv("VERSION")
+        ?: "undefined"
+}
 
 repositories {
     mavenCentral()
@@ -48,7 +52,6 @@ buildscript {
 }
 
 dependencies {
-    dokkaHtmlPlugin("org.jetbrains.dokka:versioning-plugin:2.2.0")
     dokka(project(":api"))
     nmcpAggregation(project(":api"))
     dokkaHtmlPlugin("org.jetbrains.dokka:versioning-plugin:2.2.0")

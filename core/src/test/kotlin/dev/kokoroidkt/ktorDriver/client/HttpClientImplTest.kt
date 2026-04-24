@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Kokoroid Contributors
+//
+// SPDX-License-Identifier: LGPL-2.1
+
 package dev.kokoroidkt.ktorDriver.client
 
 import dev.kokoroidkt.ktorDriver.config.Config

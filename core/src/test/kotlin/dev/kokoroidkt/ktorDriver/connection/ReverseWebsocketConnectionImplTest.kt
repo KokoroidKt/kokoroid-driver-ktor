@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2026 Kokoroid Contributors
+// SPDX-FileContributor: moran0710
+//
+// SPDX-License-Identifier: LGPL-2.1
+
 package dev.kokoroidkt.ktorDriver.connection
 
 import dev.kokoroid.transport.connection.ConnectionState

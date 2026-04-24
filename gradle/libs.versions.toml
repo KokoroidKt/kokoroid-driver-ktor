@@ -13,7 +13,7 @@ junit = "4.13.1"
 junitJupiter = "5.14.0"
 mockk = "1.13.9"
 ktlint = "14.2.0"
-kokoroid = "0.4.5"
+kokoroid = "0.4.6"
 koin-bom = "4.1.1"
 ktor = "3.4.2"
 

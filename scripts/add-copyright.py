@@ -34,12 +34,7 @@ def run_single_command(command_info, debug):
 def commands(force: bool, name: str):
     modules = [
         Path("core"),
-        Path("core-api"),
-        Path("driver-api"),
-        Path("adapter-api"),
-        Path("plugin-api"),
-        Path("test-extension"),
-        Path("transport-api"),
+        Path("api")
 
     ]
     for module in modules:

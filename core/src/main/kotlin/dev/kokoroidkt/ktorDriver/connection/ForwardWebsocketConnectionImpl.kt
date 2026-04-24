@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Kokoroid Contributors
+//
+// SPDX-License-Identifier: LGPL-2.1
+
 @file:Suppress("ktlint:standard:no-wildcard-imports")
 
 package dev.kokoroidkt.ktorDriver.connection

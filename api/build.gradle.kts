@@ -6,10 +6,6 @@ plugins {
     id("org.jetbrains.dokka-javadoc")
     signing
 }
-
-group = "dev.kokoroid"
-version = "1.0-SNAPSHOT"
-
 repositories {
     mavenCentral()
 }

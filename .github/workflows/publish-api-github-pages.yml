@@ -1,0 +1,53 @@
+name: Publish KDoc to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: '18'
+      - name: Setup JDK 21
+        uses: actions/setup-java@v5.2.0
+        with:
+          distribution: 'zulu'
+          java-version: '21'
+          cache: gradle
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6.0.1
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build Dokka HTML
+        run: ./gradlew dokkaGeneratePublicationHtml
+
+      - name: Remove unspecified versions
+        run: |
+          rm -rf docs/api/unspecified
+          rm -rf docs/api/undefined
+          rm -rf docs/api/null
+
+      - name: Prepare CNAME
+        run: echo "kdoc.kokoroidkt.dev" > docs/api/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: docs/api
+          clean: true # Set to false to keep historical versions

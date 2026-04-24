@@ -9,9 +9,6 @@ plugins {
     alias(libs.plugins.kotlinPluginSerialization)
 }
 
-group = "dev.kokoroid"
-version = "1.0-SNAPSHOT"
-
 repositories {
     mavenCentral()
 }
