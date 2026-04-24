@@ -4,9 +4,6 @@
 
 package dev.kokoroidkt.ktorDriver
 
-import dev.kokoroid.transport.connection.ConnectionState
-import dev.kokoroid.transport.raw.Data
-import dev.kokoroid.transport.raw.Raw
 import dev.kokoroidkt.coreApi.utils.getExtensionLogger
 import dev.kokoroidkt.driverApi.driver.Driver
 import dev.kokoroidkt.driverApi.utils.loadConfigFromFile
@@ -17,6 +14,9 @@ import dev.kokoroidkt.ktorDriver.connection.*
 import dev.kokoroidkt.ktorDriver.factory.ConnectionFactoryImpl
 import dev.kokoroidkt.ktorDriver.util.toKokoroidRequest
 import dev.kokoroidkt.ktorDriver.util.toKtorHttpMethod
+import dev.kokoroidkt.transport.connection.ConnectionState
+import dev.kokoroidkt.transport.raw.Data
+import dev.kokoroidkt.transport.raw.Raw
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*

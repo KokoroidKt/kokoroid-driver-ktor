@@ -5,8 +5,8 @@
 
 package dev.kokoroidkt.httpDriver.client
 
-import dev.kokoroid.transport.client.Client
 import dev.kokoroidkt.httpDriver.http.HttpMethod
+import dev.kokoroidkt.transport.client.Client
 import kotlinx.serialization.json.JsonElement
 
 abstract class WebsocketClient :

@@ -25,7 +25,7 @@ kotlin {
 
 val sourcesJar by tasks.registering(Jar::class) {
     archiveClassifier.set("sources")
-    archiveFileName.set("kokoroidkt-adapter-api-$version-sources.jar")
+    archiveFileName.set("kokoroidkt-http-driver-api-http-driver-sources.jar")
     from(sourceSets.main.get().allSource)
 }
 
@@ -40,13 +40,13 @@ tasks.jar {
             "Enable-Native-Access" to "ALL-UNNAMED",
         )
     }
-    archiveFileName.set("kokoroidkt-driver-api-$version.jar")
+    archiveFileName.set("kokoroidkt-http-driver-api-$version.jar")
 }
 
 val dokkaJavadocJar by tasks.registering(Jar::class) {
     dependsOn(tasks.dokkaGeneratePublicationJavadoc) // 依赖生成文档的任务
     archiveClassifier.set("javadoc")
-    archiveFileName.set("kokoroidkt-adapter-api-$version-javadoc.jar")
+    archiveFileName.set("kokoroidkt-http-driver-api-$version-javadoc.jar")
     from(tasks.dokkaGeneratePublicationJavadoc.flatMap { it.outputDirectory })
 }
 
@@ -90,7 +90,7 @@ publishing {
 
 signing {
     val keyId = System.getenv("GPG_KEY_ID")
-    val password = System.getenv("GPG_PASSWORD")
+    val password = System.getenv("GPG_PASSPHRASE")
     val keyContent = System.getenv("GPG_PRIVATE_KEY")
 
     if (!keyContent.isNullOrBlank() && !password.isNullOrBlank()) {

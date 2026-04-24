@@ -1,4 +1,4 @@
-name: "Build Kokoroid"
+name: "Build"
 
 on:
   push:
@@ -66,11 +66,7 @@ jobs:
       - name: Collect Artifacts
         uses: actions/upload-artifact@v7
         with:
-          name: Kokoroid
+          name: Http-Driver
           path: |
             core/build/libs/*.jar
-            core-api/build/libs/*.jar
-            adapter-api/build/libs/*.jar
-            driver-api/build/libs/*.jar
-            plugin-api/build/libs/*.jar
-            transport-api/build/libs/*.jar
+            api/build/libs/*.jar

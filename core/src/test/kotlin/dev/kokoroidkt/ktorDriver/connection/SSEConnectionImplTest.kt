@@ -5,14 +5,14 @@
 
 package dev.kokoroidkt.ktorDriver.connection
 
-import dev.kokoroid.transport.decoder.Decoder
-import dev.kokoroid.transport.raw.Data
-import dev.kokoroid.transport.raw.Raw
 import dev.kokoroidkt.coreApi.utils.getExtensionLogger
 import dev.kokoroidkt.driverApi.transport.EventEmitter
 import dev.kokoroidkt.driverApi.transport.GlobalLoopEmitter
 import dev.kokoroidkt.httpDriver.constants.AttrMagicKeys
 import dev.kokoroidkt.ktorDriver.config.Config
+import dev.kokoroidkt.transport.decoder.Decoder
+import dev.kokoroidkt.transport.raw.Data
+import dev.kokoroidkt.transport.raw.Raw
 import io.ktor.client.engine.mock.*
 import io.ktor.http.*
 import io.mockk.*

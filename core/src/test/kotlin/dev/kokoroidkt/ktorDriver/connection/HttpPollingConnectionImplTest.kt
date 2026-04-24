@@ -82,22 +82,22 @@ class HttpPollingConnectionImplTest {
         assertEquals(pollingEndpoint, connection.pollingEndpoint)
         assertEquals(delay, connection.delayMillisecond)
         assertEquals(header, connection.header)
-        assertEquals(dev.kokoroid.transport.connection.ConnectionState.PREPAREING, connection.state)
+        assertEquals(dev.kokoroidkt.transport.connection.ConnectionState.PREPAREING, connection.state)
     }
 
     @Test
     fun testRunAndClose() =
         runTest {
             connection.run()
-            assertEquals(dev.kokoroid.transport.connection.ConnectionState.RUNNING, connection.state)
+            assertEquals(dev.kokoroidkt.transport.connection.ConnectionState.RUNNING, connection.state)
 
             connection.close()
-            assertEquals(dev.kokoroid.transport.connection.ConnectionState.CLOSING, connection.state)
+            assertEquals(dev.kokoroidkt.transport.connection.ConnectionState.CLOSING, connection.state)
         }
 
     @Test
     fun testRegisterDecoder() {
-        val decoder = mockk<dev.kokoroid.transport.decoder.Decoder>()
+        val decoder = mockk<dev.kokoroidkt.transport.decoder.Decoder>()
         connection.registerDecoder(decoder)
         assertTrue(connection.decoders.contains(decoder))
     }
@@ -128,7 +128,7 @@ class HttpPollingConnectionImplTest {
                     pollingCookie = pollingCookie,
                 )
 
-            val decoder = mockk<dev.kokoroid.transport.decoder.Decoder>()
+            val decoder = mockk<dev.kokoroidkt.transport.decoder.Decoder>()
             every { decoder.invoke(any()) } returns null
             testConnection.registerDecoder(decoder)
 
@@ -159,7 +159,7 @@ class HttpPollingConnectionImplTest {
                     pollingCookie = pollingCookie,
                 )
 
-            val decoder = mockk<dev.kokoroid.transport.decoder.Decoder>()
+            val decoder = mockk<dev.kokoroidkt.transport.decoder.Decoder>()
             testConnection.registerDecoder(decoder)
 
             testConnection.heartbeat()
@@ -171,9 +171,9 @@ class HttpPollingConnectionImplTest {
     fun testRunIdempotency() =
         runTest {
             connection.run()
-            assertEquals(dev.kokoroid.transport.connection.ConnectionState.RUNNING, connection.state)
+            assertEquals(dev.kokoroidkt.transport.connection.ConnectionState.RUNNING, connection.state)
             connection.run()
-            assertEquals(dev.kokoroid.transport.connection.ConnectionState.RUNNING, connection.state)
+            assertEquals(dev.kokoroidkt.transport.connection.ConnectionState.RUNNING, connection.state)
         }
 
     /**

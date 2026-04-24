@@ -5,10 +5,10 @@
 
 package dev.kokoroidkt.httpDriver.connection
 
-import dev.kokoroid.transport.connection.Connection
 import dev.kokoroidkt.httpDriver.client.HttpClient
 import dev.kokoroidkt.httpDriver.http.HttpMethod
 import dev.kokoroidkt.httpDriver.rule.ServerRule
+import dev.kokoroidkt.transport.connection.Connection
 
 /**
  * 用于使用Webhook方式连接服务端

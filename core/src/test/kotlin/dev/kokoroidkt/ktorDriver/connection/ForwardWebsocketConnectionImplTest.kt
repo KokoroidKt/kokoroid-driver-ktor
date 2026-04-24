@@ -4,13 +4,13 @@
 
 package dev.kokoroidkt.ktorDriver.connection
 
-import dev.kokoroid.transport.decoder.Decoder
-import dev.kokoroid.transport.raw.Data
-import dev.kokoroid.transport.raw.Raw
 import dev.kokoroidkt.coreApi.utils.getExtensionLogger
 import dev.kokoroidkt.driverApi.transport.EventEmitter
 import dev.kokoroidkt.driverApi.transport.GlobalLoopEmitter
 import dev.kokoroidkt.ktorDriver.config.Config
+import dev.kokoroidkt.transport.decoder.Decoder
+import dev.kokoroidkt.transport.raw.Data
+import dev.kokoroidkt.transport.raw.Raw
 import io.mockk.*
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.buildJsonObject
@@ -105,7 +105,7 @@ class ForwardWebsocketConnectionImplTest {
                 )
             // 模拟状态变更
             connection.close()
-            assertEquals(dev.kokoroid.transport.connection.ConnectionState.CLOSING, connection.state)
+            assertEquals(dev.kokoroidkt.transport.connection.ConnectionState.CLOSING, connection.state)
         }
 
     @Test

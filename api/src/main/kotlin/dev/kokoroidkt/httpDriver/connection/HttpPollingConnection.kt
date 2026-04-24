@@ -5,9 +5,9 @@
 
 package dev.kokoroidkt.httpDriver.connection
 
-import dev.kokoroid.transport.connection.Connection
-import dev.kokoroid.transport.connection.Heartbeatable
 import dev.kokoroidkt.httpDriver.client.HttpClient
+import dev.kokoroidkt.transport.connection.Connection
+import dev.kokoroidkt.transport.connection.Heartbeatable
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.buildJsonObject
 

@@ -5,8 +5,8 @@
 
 package dev.kokoroidkt.httpDriver.connection
 
-import dev.kokoroid.transport.connection.Connection
 import dev.kokoroidkt.httpDriver.client.WebsocketClient
+import dev.kokoroidkt.transport.connection.Connection
 import java.net.URI
 
 /**

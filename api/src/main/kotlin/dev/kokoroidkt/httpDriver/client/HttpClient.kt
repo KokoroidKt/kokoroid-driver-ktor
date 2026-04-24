@@ -5,8 +5,8 @@
 
 package dev.kokoroidkt.httpDriver.client
 
-import dev.kokoroid.transport.client.Client
 import dev.kokoroidkt.httpDriver.http.HttpResponse
+import dev.kokoroidkt.transport.client.Client
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.buildJsonObject
 import java.io.File

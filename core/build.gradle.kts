@@ -13,6 +13,14 @@ repositories {
     mavenCentral()
 }
 
+tasks.jar {
+    archiveFileName.set("kokoroid-http-driver-$version.jar")
+}
+
+tasks.shadowJar {
+    archiveFileName.set("kokoroid-http-driver-$version-all.jar")
+}
+
 dependencies {
     testImplementation(kotlin("test"))
     testImplementation(libs.mockk)
@@ -36,10 +44,10 @@ tasks.test {
 }
 
 runKokoroid {
-    extensionFilename = "core-1.0-SNAPSHOT-all.jar"
+    extensionFilename = "kokoroid-http-driver-$version-all.jar"
     // i delete the github token, oops
     isValidationOnly = false
-    skipDownload = true
+    skipDownload = false
     enableKokoroidDebug = true
     testExtensionType = ExtensionTypes.DRIVER
 }

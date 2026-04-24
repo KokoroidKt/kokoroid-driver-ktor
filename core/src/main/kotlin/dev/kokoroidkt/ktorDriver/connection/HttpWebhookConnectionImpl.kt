@@ -4,10 +4,6 @@
 
 package dev.kokoroidkt.ktorDriver.connection
 
-import dev.kokoroid.transport.connection.ConnectionState
-import dev.kokoroid.transport.decoder.Decoder
-import dev.kokoroid.transport.raw.Data
-import dev.kokoroid.transport.raw.Raw
 import dev.kokoroidkt.coreApi.utils.getExtensionLogger
 import dev.kokoroidkt.driverApi.transport.EventEmitter
 import dev.kokoroidkt.httpDriver.connection.HttpWebhookConnection
@@ -16,6 +12,10 @@ import dev.kokoroidkt.httpDriver.http.HttpResponse
 import dev.kokoroidkt.httpDriver.rule.ServerRule
 import dev.kokoroidkt.ktorDriver.client.HttpClientImpl
 import dev.kokoroidkt.ktorDriver.config.Config
+import dev.kokoroidkt.transport.connection.ConnectionState
+import dev.kokoroidkt.transport.decoder.Decoder
+import dev.kokoroidkt.transport.raw.Data
+import dev.kokoroidkt.transport.raw.Raw
 import io.ktor.client.engine.*
 import io.ktor.client.engine.cio.*
 import kotlinx.coroutines.Dispatchers

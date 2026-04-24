@@ -14,8 +14,8 @@ import kotlinx.serialization.json.JsonElement
 import java.net.URI
 
 class ConnectionFactoryImpl : ConnectionFactory {
-    private val _connections: MutableList<dev.kokoroid.transport.connection.Connection> = mutableListOf()
-    val connections: List<dev.kokoroid.transport.connection.Connection> get() = _connections.toList()
+    private val _connections: MutableList<dev.kokoroidkt.transport.connection.Connection> = mutableListOf()
+    val connections: List<dev.kokoroidkt.transport.connection.Connection> get() = _connections.toList()
 
     override fun getForwardWebsocketConn(
         websocketUrl: URI,

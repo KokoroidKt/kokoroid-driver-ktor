@@ -5,9 +5,9 @@
 
 package dev.kokoroidkt.httpDriver.connection
 
-import dev.kokoroid.transport.connection.Connection
 import dev.kokoroidkt.httpDriver.client.WebsocketServer
 import dev.kokoroidkt.httpDriver.rule.ServerRule
+import dev.kokoroidkt.transport.connection.Connection
 
 /**
  * 用于反向连接Websocket， 即：

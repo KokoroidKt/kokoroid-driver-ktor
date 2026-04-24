@@ -5,8 +5,8 @@
 
 package dev.kokoroidkt.httpDriver.connection
 
-import dev.kokoroid.transport.connection.Connection
 import dev.kokoroidkt.httpDriver.client.HttpClient
+import dev.kokoroidkt.transport.connection.Connection
 
 /**
  * 使用SSE连接服务器
