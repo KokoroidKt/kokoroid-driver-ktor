@@ -5,6 +5,7 @@
 
 package dev.kokoroidkt.httpDriver.factory
 
+import dev.kokoroidkt.httpDriver.client.HttpClient
 import dev.kokoroidkt.httpDriver.connection.*
 import dev.kokoroidkt.httpDriver.http.HttpMethod
 import dev.kokoroidkt.httpDriver.rule.ServerRule
@@ -36,6 +37,11 @@ interface ConnectionFactory {
         pollingHeader: Map<String, List<String>?> = emptyMap(),
         pollingCookie: Map<String, String> = emptyMap(),
     ): HttpPollingConnection
+
+    fun getHttpClient(
+        baseUrl: URI,
+        headers: Map<String, List<String>> = mapOf(),
+    ): HttpClient
 
     fun getHttpWebhookConn(
         webhookEndpoint: String,

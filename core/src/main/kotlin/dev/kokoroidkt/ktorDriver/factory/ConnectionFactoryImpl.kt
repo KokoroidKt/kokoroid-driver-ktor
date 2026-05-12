@@ -8,9 +8,12 @@ import dev.kokoroidkt.httpDriver.connection.*
 import dev.kokoroidkt.httpDriver.factory.ConnectionFactory
 import dev.kokoroidkt.httpDriver.http.HttpMethod
 import dev.kokoroidkt.httpDriver.rule.ServerRule
+import dev.kokoroidkt.ktorDriver.client.HttpClientImpl
 import dev.kokoroidkt.ktorDriver.connection.*
+import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.*
 import kotlinx.serialization.json.JsonElement
+import kotlinx.serialization.json.buildJsonObject
 import java.net.URI
 
 class ConnectionFactoryImpl : ConnectionFactory {
@@ -61,6 +64,15 @@ class ConnectionFactoryImpl : ConnectionFactory {
         _connections.add(impl)
         return impl
     }
+
+    override fun getHttpClient(
+        baseUrl: URI,
+        headers: Map<String, List<String>>,
+    ): dev.kokoroidkt.httpDriver.client.HttpClient =
+        HttpClientImpl(
+            baseUrl = baseUrl,
+            header = headers,
+        )
 
     override fun getHttpWebhookConn(
         webhookEndpoint: String,
