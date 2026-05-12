@@ -55,3 +55,5 @@ interface ConnectionFactory {
         fun create(): ConnectionFactory = getKoin().get<ConnectionFactory>()
     }
 }
+
+fun getConnectionFactory(): ConnectionFactory = getKoin().get<ConnectionFactory>()
