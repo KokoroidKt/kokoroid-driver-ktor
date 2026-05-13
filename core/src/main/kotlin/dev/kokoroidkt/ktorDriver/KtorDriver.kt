@@ -35,7 +35,7 @@ class KtorDriver : Driver() {
 
     val ktorServer by lazy {
         val config = Config.config
-        embeddedServer(Netty, port = Config.config.port, host = "0.0.0.0") {
+        embeddedServer(Netty, port = Config.config.port, host = Config.config.ip) {
             install(WebSockets) {
                 pingPeriod = config.websocketServerPingInterval.milliseconds
                 timeout = config.websocketServerTimeoutMillisecond.milliseconds
